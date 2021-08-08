@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.css" />
+</head>
+<body>
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="../bootstrap.js"></script>
+    <p  style="background-color: greenyellow; color: black;">
+       Confirmation!
+    </p>
+    <br><br>
+    <div class="row">
+        <div class="card" style="width:300px" >
+            <img src="../samsung.jpg" />
+            <div class="card-body">
+                <div class="card-title">Samsung M31s</div>
+                <p><b style="background-color: chartreuse; color: darkblue;">$300</b></p>
+            </div>
+            <button id="G1" class="card-link btn btn-primary btn-block">Buy Now!!!</button>
+        </div>
+        <div class="card" style="width:300px">
+           
+            <div class="card-body">
+                <div class="card-title"><b style="background-color: red; color: chartreuse;">Samsung M31-s Specs</b></div>
+                <p class="change">
+Dimensions
+
+Height: 15.91cm
+
+Width: 7.33cm
+Thickness: 0.82cm (Green Woods : 0.83cm)
+Weight: 189g (Green Woods : 184g)
+
+Display
+Parameters
+Size: 6.43 inches
+Resolution: 2400 x 1080 pixels 410ppi
+Aspect Ratio: 20:9
+Type: Refresh Rate: 90Hz
+Type: Fluid AMOLED
+
+Support sRGB, Display P3
+
+                </p>
+                <p><b class="Switch" style="background-color: chartreuse; color: red;">Assured!</b></p>
+                <a href="../plp&pdp.html" class="card-link btn btn-primary btn-block">Home</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+         $(function(){
+          $("#G1").click(function(){
+             $("#G1").html(" Successfully purchased!!!").css("background-color", "green");
+             $(".change").html("Thank you for shopping with us!!");
+             $(".Switch").html("Continue Shopping!!");
+             });
+          });
+    </script>
+</body>
+</html>
