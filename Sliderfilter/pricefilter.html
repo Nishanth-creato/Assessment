@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<style>
+    #range{
+        font-weight: bold;
+        color: red;
+        background-color: black;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    table, th, td{
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
+    #slider
+    {
+        width:500px;
+    }
+</style>
+</head>
+<body>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+    <script>
+        
+            var details = {
+                "Supermario" : 4,
+                "Spiderman" : 8,
+                "Minesweeper" : 4,
+                "GTA" : 18,
+                "RocketLeague" : 16,
+                "Watchdogs" : 18,
+                "Fortnite" : 18,
+                "Hitman" : 18,
+                "Call of Duty" : 18 
+            };
+            $(function(){
+            $("#slider").slider({max:30, range:true, values:[18,30], slide:function(event, ui){
+                getDetails(ui.values[0], ui.values[1]);
+            }});
+            var current = $("#slider").slider("option","values");
+            getDetails(current[0], current[1]);
+        });
+        function getDetails(minimum, maximum)
+        {
+            $("#range").text(" Age " + minimum + "-Age " + maximum);
+            var result = "<table><tr><th>Product Name </th>&nbsp;&nbsp;<th> Age criteria</th></tr>";
+                for(var product in details)
+                {
+                    if(details[product] >= minimum && details[product] <= maximum)
+                    {
+                        result += "<tr><td>" + product + "</td><td>" + details[product] + "</td></tr>";
+                    }
+                }
+                result += "</table>";
+                $("#output").html(result);
+        }
+    </script>
+    <b>Price Range: </b><span id="range"></span>
+    <div id="slider" style="background: red;";></div>
+    <div id="output"></div>
+</body>
+</html>
