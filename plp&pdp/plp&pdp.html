@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGO</title>
+    <link rel="stylesheet" href="./bootstrap.css" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand text-danger" href="#">LOGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" >Contact US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="card" style="width:300px" >
+            <img src="./oneplus.jpg" />
+            <div class="card-body">
+                <div class="card-title">Oneplus Nord2</div>
+                <p><b style="background-color: chartreuse; color: darkblue;">$450</b></p>
+            </div>
+            <button id="G1" class="card-link btn btn-primary btn-block">Order</button>
+        </div>
+        <div class="card" style="width:300px">
+            <img src="./samsung.jpg"  width="200px">
+            <br>
+            <div class="card-body">
+                <div class="card-title">Samsung M-31S</div>
+                <p><b style="background-color: chartreuse; color: red;">$300</b></p>
+            </div>
+            <button id="G2" class="card-link btn btn-primary btn-block">Order</button>
+        </div>
+        <div class="card" style="width:300px">
+            <img src="./apple.jpg" />
+            <div class="card-body">
+                
+                <div class="card-title">Apple Iphone 11</div>
+                <p><b style="background-color: blue; color: chartreuse;">$800</b></p>
+            </div>
+            <button id="G3" class="card-link btn btn-primary btn-block">Order</button>
+        </div>
+        <div class="card" style="width:300px">
+            <img src="./Redmi.jpg" width="200px" />
+            <div class="card-body">
+                <div class="card-title">Redmi 10i</div>
+                <p><b style="background-color: chartreuse; color: darkblue;">$300</b></p>
+            </div>
+            <button id="G4" class="card-link btn btn-primary btn-block">Order</button>        
+    </div>
+    </div>
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./bootstrap.js"></script>
+    <script>
+          $(function(){
+            $("#G1").click(function(){
+                window.location.href = "./pages/page1.html";
+            });
+        });
+        $(function(){
+            $("#G2").click(function(){
+                window.location.href = "./pages/page2.html";
+            });
+        });
+        $(function(){
+            $("#G3").click(function(){
+                window.location.href = "./pages/page3.html";
+            });
+        });
+        $(function(){
+            $("#G4").click(function(){
+
+                window.location.href = "./pages/page4.html";
+            });
+        });
+
+    </script>
+</body>
+</html>
