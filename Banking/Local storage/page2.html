@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            background-color: darkcyan;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <div class="container">
+    <p>
+        <h1>
+            <h1 style="color: chartreuse; background-color: darkblue;">Welcome!!</h1>
+        </h1>
+    </p>
+    <br><br>
+    <b style="background-color: darkblue; color: chartreuse;">Hello!!...</b> &nbsp;<span id="result"></span>
+    <br><br>
+    <label><b style="background-color: black; color: blanchedalmond;">Account No: 123456</b></label>
+    <br><br>
+    <label id="account">Your account balance is:</label>&nbsp;<span id="amount1" style="background-color: black; color: blanchedalmond;"></span>
+    <br><br>
+    <button id="credit">Credit</button>
+    <input type="text" id="value1" placeholder="Enter amount">
+    <br><br>
+    <button id="Debit">Debit</button>
+    <input type="text" id="value2" placeholder="Enter amount">
+    <br><br>
+    <button id="logout">Logout!</button>
+    </div>
+    <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("getvalue");
+        document.getElementById("amount1").innerHTML=localStorage.getItem("value");
+        $(function(){
+            $("#logout").click(function(){
+                window.location.href = "localstorage.html";
+            });
+            $("#credit").click(function(){
+               var rate = parseInt( $("#value1").val());
+               var rate2 = localStorage.getItem("value");
+               var sum = parseInt(rate) + parseInt(rate2);
+               localStorage.setItem("value",sum);
+               $("#amount1").html(sum);
+            });  
+            $("#Debit").click(function(){
+                var rate1 = parseInt( $("#value2").val());
+               var rate3 = localStorage.getItem("value");
+               var sum1 = parseInt(rate3) - parseInt(rate1);
+               localStorage.setItem("value",sum1);
+               $("#amount1").html(sum1);
+            });  
+        });
+    </script>
+</body>
+</html>
